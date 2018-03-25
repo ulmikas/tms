@@ -1,20 +1,37 @@
-web:
-  build: .
-  ports:
-  - "4000:4000"
-  volumes:
-  - .:/usr/src/app/:rw
-  environment:
-  - NODE_ENV=dev
-  # Before you run this file for the first time, make sure 
-  # you remove node_modules/ folders in your host machine
-  command: >
-    sh -c '
-    if test -d node_modules;
-    then
-      echo node_modules_exists ;
-    else
-      cp -a /tmp/node_modules /usr/src/app/;
-    fi && 
-    yarn install && yarn start  --port 4000 --host 0.0.0.0
-    '
+version: "3"
+services: 
+  web:
+    build: .
+    ports:
+    - "4000:4000"
+    volumes:
+    - .:/usr/src/app/:rw
+    environment:
+    - NODE_ENV=dev
+    # Before you run this file for the first time, make sure 
+    # you remove node_modules/ folders in your host machine
+    command: >
+      sh -c '
+      if test -d node_modules;
+      then
+        echo node_modules_exists ;
+      else
+        cp -a /tmp/node_modules /usr/src/app/;
+      fi && 
+      yarn install && yarn start --port 4000 --host 0.0.0.0'
+
+  web-build:
+    build: .
+    volumes:
+    - .:/usr/src/app/:rw
+    environment:
+    - NODE_ENV=production
+    command: >
+      sh -c '
+      if test -d node_modules;
+      then
+        echo node_modules_exists ;
+      else
+        cp -a /tmp/node_modules /usr/src/app/;
+      fi && 
+      yarn install && yarn build'

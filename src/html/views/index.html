@@ -1,13 +1,8 @@
 <%
 var data = {
-  title: "Заголовок | Проект",
-  categories: [
-    "test",
-    "fast",
-    "best"
-  ]
-};
-
+  data: htmlWebpackPlugin.options.content || {},
+  headerTitle: 'index',
+}
 var _tpl = name => _.template(require(`./../includes/${name}.html`))(data);
 %>
 
@@ -16,7 +11,6 @@ var _tpl = name => _.template(require(`./../includes/${name}.html`))(data);
 <div class="container">
   <%= _tpl('promo') %>
   <%= _tpl('about') %>
-  <%= _tpl('categories') %>
   <%= _tpl('terms') %>
   <%= _tpl('contactusform') %>
   <%= _tpl('contacts') %>

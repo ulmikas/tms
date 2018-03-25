@@ -4,6 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 
+const data = require('./data.js');
+
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
   return templateFiles.map((item) => {
@@ -14,11 +16,24 @@ function generateHtmlPlugins(templateDir) {
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       inject: false,
+      content: data,
     });
   });
 }
 
+const generateCategoriesHtml = categories => categories.map(cat => (
+  new HtmlWebpackPlugin({
+    filename: `${cat.slug}.html`,
+    template: path.resolve(__dirname, './src/html/test/category.html'),
+    inject: false,
+    category: cat,
+    title: cat.name,
+  })
+));
+
 const htmlPlugins = generateHtmlPlugins('./src/html/views');
+
+const categoriesPages = generateCategoriesHtml(data.categories);
 
 module.exports = {
   entry: [
@@ -76,5 +91,5 @@ module.exports = {
       allChunks: true,
     }),
     new HtmlWebpackPlugin(),
-  ].concat(htmlPlugins),
+  ].concat(htmlPlugins).concat(categoriesPages),
 };
