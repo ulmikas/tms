@@ -11,6 +11,7 @@ var _tpl = name => _.template(require(`./../includes/${name}.html`))(data);
 <div class="container">
   <%= _tpl('promo') %>
   <%= _tpl('about') %>
+  <%= _tpl('categories') %>
   <%= _tpl('terms') %>
   <%= _tpl('contactusform') %>
   <%= _tpl('contacts') %>

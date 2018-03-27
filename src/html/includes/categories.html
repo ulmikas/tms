@@ -1,5 +1,12 @@
 <div>
-  <% categories.forEach((item) => {%>
-    <%-item%>
+  <% data.categories.forEach((item) => {%>
+    <%= item.catName %>
+    <p>
+      <img src="images/<%- item.catImage %>" alt="">
+    </p>
   <%}) %>
+
+  <p>
+    скачайте pdf
+  </p>
 </div>

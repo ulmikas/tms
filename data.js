@@ -2,7 +2,8 @@ const data = {
   categories: [
     {
       slug: 'category1',
-      name: 'категория 1',
+      catName: 'категория 1',
+      catImage: 'cat1.png',
       description: 'категория 1 описание',
       products: [
         {
@@ -19,7 +20,8 @@ const data = {
     },
     {
       slug: 'category2',
-      name: 'категория 2',
+      catName: 'категория 2',
+      catImage: 'cat-image2.jpg',
       description: 'категория 2 описание',
       products: [
         {
