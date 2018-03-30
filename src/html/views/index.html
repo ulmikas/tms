@@ -1,20 +1,22 @@
 <%
-var data = {
-  data: htmlWebpackPlugin.options.content || {},
-  headerTitle: 'index',
-}
-var _tpl = name => _.template(require(`./../includes/${name}.html`))(data);
+  var data = {
+    data: htmlWebpackPlugin.options.content || {},
+    headerTitle: 'index',
+  }
+  var _tpl = name => _.template(require(`./../includes/${name}.html`))(data);
 %>
 
-<%= _tpl('header') %>
+  <%= _tpl('header') %> 
 
-<div class="container">
-  <%= _tpl('promo') %>
-  <%= _tpl('about') %>
-  <%= _tpl('categories') %>
-  <%= _tpl('terms') %>
-  <%= _tpl('contactusform') %>
-  <%= _tpl('contacts') %>
-</div>
+  <div class="content">
+    <%= _tpl('promo') %>
+    <%= _tpl('about') %>
+!
+    <%= _tpl('categories') %>
+!
+    <%= _tpl('terms') %>
+    <%= _tpl('contactusform') %>
+    <%= _tpl('contacts') %>
+  </div>
 
-<%= _tpl('footer') %>
+  <%= _tpl('footer') %>

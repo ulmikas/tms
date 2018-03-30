@@ -1,0 +1,198 @@
+$tablet: 768px;
+
+header {
+  background: #bb0;
+  padding: 50px 0;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    transition: padding 300ms ease-in-out;
+  }
+
+  .logo {
+    display: inline-block;
+  }
+
+  nav {
+    position: relative;
+    top: 45%;
+    transform: translatey(-45%);
+
+    ul.primary-nav {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+
+      @media (min-width: $tablet) {
+        margin: 0 0 0 75px;
+      }
+
+      li {
+        display: block;
+        margin-bottom: 25px;
+        opacity: 0;
+        transform: translate3d(0, -80px, 0);
+        transition: transform 0.3s, opacity 0.3s;
+
+        @media (min-width: $tablet) {
+          display: inline;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        a {
+          color: #fff;
+          font-size: 25px;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding-right: 0;
+          text-decoration: none;
+          transition: all 300ms ease-in-out;
+
+          @media (min-width: $tablet) {
+            font-size: 13px;
+            padding-right: 25px;
+          }
+
+          &:hover {
+            color: #ff5274;
+          }
+        }
+
+        &:first-child {
+          transition-delay: 0.05s;
+        }
+
+        &:nth-child(2) {
+          transition-delay: 0.1s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 0.15s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 0.2s;
+        }
+      }
+    }
+  }
+
+  .nav-wrapper {
+    display: absolute;
+  }
+
+  .header-nav {
+    display: inline-block;
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+
+    @media (min-width: $tablet) {
+      position: static;
+      opacity: 1;
+    }
+  }
+
+  .header-nav.open {
+    visibility: visible;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+
+    ul.primary-nav li {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .navigation {
+    transition: all 300ms ease-in-out;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .fixed {
+    position: fixed;
+    background-color: #232731;
+    z-index: 999;
+    width: 100%;
+  }
+
+  .navicon {
+    visibility: visible;
+    position: absolute;
+    height: 26px;
+    right: 10px;
+    top: 48px;
+    transition: all 300ms ease-in-out;
+
+    @media (min-width: $tablet) {
+      visibility: hidden;
+    }
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    z-index: 999999;
+    padding: 10px 35px 16px 0;
+    cursor: pointer;
+
+    span {
+      &,
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 3px;
+        border-radius: 1px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      span {
+        background-color: transparent;
+
+        &::before,
+        &::after {
+          top: 0;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 10px;
+          transform: translatey(-10px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
