@@ -1,5 +1,8 @@
+@import './includes/_variables.scss';
 @import './includes/_reset.scss';
+@import './includes/_buttons.scss';
 @import './includes/_header.scss';
+@import './includes/_promo.scss';
 
 $font-stack: -apple-system, BlinkMacSystemFont, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 $containerWidth: 1024px;
@@ -25,6 +28,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: $containerWidth;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: $tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 /* Components */

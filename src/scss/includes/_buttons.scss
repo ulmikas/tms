@@ -1,0 +1,57 @@
+.btn {
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  height: 52px;
+  padding: 0 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .btn-icon {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-right: 10px;
+
+    svg {
+      display: block;
+      height: 100%;
+    }
+  }
+}
+
+.btn-primary {
+  color: $btn-primary-color;
+  background: $btn-primary-background;
+
+  &:hover {
+    background: $btn-primary-background-hover;
+  }
+  &:focus,
+  &:active {
+    background: $btn-primary-background-focus;
+  }
+}
+
+.btn-secondary {
+  border: 2px solid $btn-secondary-border-color;
+  background: transparent;
+
+  &:hover {
+    background: $btn-secondary-background-hover;
+    border-color: $btn-secondary-border-color-hover;
+  }
+  &:focus,
+  &:active {
+    border-color: $btn-secondary-border-color-focus;
+  }
+}
