@@ -1,24 +1,27 @@
-<div class="container">
-  <div class="grid">
-    <% data.categories.forEach((item) => {%>
-      <div class="grid__cell grid-cell">
-        <div class="grid-cell__face">
-          <div class="grid-cell__image">
-            <img src="images/<%- item.catImage %>" alt="">
+<div class="catalog">
+  <div class="container">
+    <h3 class="text-align-center">Продукты</h3>
+    <div class="grid">
+      <% data.categories.forEach((item) => {%>
+        <div class="grid__cell grid-cell">
+          <div class="grid-cell__face">
+            <div class="grid-cell__image">
+              <img src="images/<%- item.catImage %>" alt="">
+            </div>
+          </div>
+          <div class="grid-cell__back">
+            <div class="grid-cell__icon">
+              <span class="icon icon__plus"></span>
+            </div>
+            <div class="grid-cell__description">
+              <%= item.catName %>
+            </div>
           </div>
         </div>
-        <div class="grid-cell__back">
-          <div class="grid-cell__icon">
-            <span class="icon icon__plus"></span>
-          </div>
-          <div class="grid-cell__description">
-            <%= item.catName %>
-          </div>
-        </div>
-      </div>
-    <%}) %>
-  </div>
-  <div>
-    скачайте pdf
+        <%}) %>
+    </div>
+    <div>
+      скачайте pdf
+    </div>
   </div>
 </div>

@@ -1,0 +1,36 @@
+.terms {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.terms__left {
+  padding-right: $side-padding-mobile;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding-right: $side-padding;
+  }
+
+  &::after {
+    background: $grey-lighter;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    top: 35px;
+  }
+}
+
+.terms__right {
+  padding-left: $side-padding-mobile;
+
+  @media (min-width: $tablet) {
+    padding-left: $side-padding;
+  }
+}
+
+.terms__text {
+  color: $grey-light;
+  font-size: 16px;
+}

@@ -3,7 +3,10 @@ $black: #000;
 $white: #fff;
 $grey:  #3D4351;
 $grey-dark: #262A36;
+$grey-medium: #495061;
 $grey-light: #778698;
+$grey-lighter: #C8D8E0;
+$grey-lightest: #EBECF0;
 $primary-color: #D12027;
 
 /* menu */
@@ -16,15 +19,17 @@ $menu-toggle-color: $grey-dark;
 /* buttons */
 $btn-primary-color: $white;
 $btn-primary-background: $primary-color;
-$btn-primary-background-hover: darken($btn-primary-background, $amount: 20);
-$btn-primary-background-focus: darken($btn-primary-background, $amount: 10);
+$btn-primary-background-hover: darken($btn-primary-background, $amount: 10);
+$btn-primary-background-focus: darken($btn-primary-background, $amount: 20);
 
-$btn-secondary-color: $grey-dark;
+$btn-secondary-color: $primary-color;
+$btn-secondary-color-hover: $white;
 $btn-secondary-border-color: $primary-color;
 $btn-secondary-border-color-hover: darken($btn-secondary-border-color, $amount: 10);
 $btn-secondary-border-color-focus: lighten($btn-secondary-border-color, $amount: 20);
-$btn-secondary-background-hover: rgba(255,255,255, .2);
+$btn-secondary-background-hover: $primary-color;
 
 /* layout */
 $tablet: 768px;
-$side-padding: 30px;
+$side-padding: 40px;
+$side-padding-mobile: 20px;
