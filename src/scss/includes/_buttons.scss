@@ -23,11 +23,12 @@
   .btn-icon {
     display: inline-block;
     height: 11px;
-    width: 11px;
+    font-size: 14px;
     margin-right: 10px;
+    text-transform: lowercase;
 
     svg {
-      display: block;
+      display: inline-block;
       height: 100%;
     }
   }

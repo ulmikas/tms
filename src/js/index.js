@@ -45,6 +45,20 @@ const handleSkipPromo = () => {
   verticalSmoothScroll(promoHeight - STICKY_HEADER_HEIGHT);
 };
 
+const handleOpenMenu = () => {
+  const headerNav = document.querySelector(HEADER_NAV);
+  const headerNavToggle = document.querySelector(NAV_TOGGLE_ICON);
+  headerNavToggle.classList.add('active');
+  headerNav.classList.add('open');
+};
+
+const handleCloseMenu = () => {
+  const headerNav = document.querySelector(HEADER_NAV);
+  const headerNavToggle = document.querySelector(NAV_TOGGLE_ICON);
+  headerNavToggle.classList.remove('active');
+  headerNav.classList.remove('open');
+};
+
 const handleToggleMenu = () => {
   const headerNav = document.querySelector(HEADER_NAV);
   const headerNavToggle = document.querySelector(NAV_TOGGLE_ICON);
@@ -55,6 +69,7 @@ const handleToggleMenu = () => {
 const handleNavigation = (e) => {
   e.preventDefault();
   scrollToSection(e.target.hash);
+  handleCloseMenu();
 };
 
 const handleGoToBtn = (e) => {

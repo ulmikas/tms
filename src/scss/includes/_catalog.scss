@@ -2,4 +2,20 @@
   background: $grey-lightest;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  .grid {
+    margin-bottom: 60px;
+  }
+}
+
+.catalog__subtitle {
+  color: $grey-light;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.catalog__actions {
+  text-align: center;
 }
