@@ -10,11 +10,11 @@ $grey-lightest: #EBECF0;
 $primary-color: #D12027;
 
 /* menu */
-$menu-background: $white;
+$menu-background: $grey-dark;
 $menu-background-mobile: $black;
-$menu-items-color: $grey-dark;
-$menu-items-color-mobile: $white;
-$menu-toggle-color: $grey-dark;
+$menu-items-color: $grey-lighter;
+$menu-items-color-mobile: $grey-lighter;
+$menu-toggle-color: $grey-lighter;
 
 /* buttons */
 $btn-primary-color: $white;
