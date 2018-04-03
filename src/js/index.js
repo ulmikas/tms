@@ -1,4 +1,5 @@
 import { hasTouch } from 'detect-touch';
+import smoothscroll from 'smoothscroll-polyfill';
 
 const STICKY_HEADER_TRIGGER = 50;
 const STICKY_HEADER_HEIGHT = 88;
@@ -77,6 +78,7 @@ const handleGoToBtn = (e) => {
   scrollToSection(sel);
 };
 
+smoothscroll.polyfill();
 if (hasTouch) {
   document.body.classList.add('touchscreen');
 }

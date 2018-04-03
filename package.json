@@ -38,6 +38,7 @@
     "start": "webpack-dev-server --mode development"
   },
   "dependencies": {
-    "detect-touch": "^1.1.1"
+    "detect-touch": "^1.1.1",
+    "smoothscroll-polyfill": "^0.4.3"
   }
 }

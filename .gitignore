@@ -1,4 +1,5 @@
 .DS_Store
 node_modules/
 DesignSrc/
+dist/
 yarn-error.log

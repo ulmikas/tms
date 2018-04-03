@@ -19,19 +19,3 @@ services:
         cp -a /tmp/node_modules /usr/src/app/;
       fi && 
       yarn install && yarn start --port 4000 --host 0.0.0.0'
-
-  web-build:
-    build: .
-    volumes:
-    - .:/usr/src/app/:rw
-    environment:
-    - NODE_ENV=production
-    command: >
-      sh -c '
-      if test -d node_modules;
-      then
-        echo node_modules_exists ;
-      else
-        cp -a /tmp/node_modules /usr/src/app/;
-      fi && 
-      yarn install && yarn build'

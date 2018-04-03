@@ -9,7 +9,6 @@ COPY . /usr/src/app/
 RUN cp -a /tmp/node_modules /usr/src/app/
 RUN node_modules/.bin/webpack
 
-
 CMD [ "yarn", "run", "start" ]
 
 EXPOSE 4000
