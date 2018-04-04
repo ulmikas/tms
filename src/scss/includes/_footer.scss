@@ -31,14 +31,20 @@
     }
   }
 }
+
 .footer {
   background: $grey;
   padding-top: 25px;
   padding-bottom: 35px;
+
+  .flex {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 }
 
 .footer__logo {
-  display: inline-block;
+  float: left;
   vertical-align: middle;
   margin-right: 20px;
 }

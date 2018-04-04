@@ -4,29 +4,25 @@
 }
 
 .terms__left {
-  padding-right: $side-padding-mobile;
   position: relative;
 
-  @media (min-width: $tablet) {
-    padding-right: $side-padding;
-  }
-
   &::after {
-    background: $grey-lighter;
+    display: block;
     content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 1px;
-    top: 35px;
-  }
-}
-
-.terms__right {
-  padding-left: $side-padding-mobile;
-
-  @media (min-width: $tablet) {
-    padding-left: $side-padding;
+    background: $grey-lighter;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+    
+    @media (min-width: $tablet) {
+      height: auto;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 1px;
+      top: 35px;
+      margin-bottom: 0;
+    }
   }
 }
 

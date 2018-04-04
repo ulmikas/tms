@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 const fs = require('fs');
 
 const data = require('./data.js');
@@ -37,10 +38,7 @@ const htmlPlugins = generateHtmlPlugins('./src/html/views');
 const categoriesPages = generateCategoriesHtml(data.categories);
 
 module.exports = {
-  entry: [
-    './src/js/index.js',
-    './src/scss/style.scss',
-  ],
+  entry: ['./src/js/index.js', './src/scss/style.scss'],
   output: {
     filename: './js/bundle.js',
   },
@@ -61,20 +59,32 @@ module.exports = {
         test: /\.(sass|scss)$/,
         include: path.resolve(__dirname, 'src/scss'),
         use: ExtractTextPlugin.extract({
-          use: [{
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              minimize: true,
-              url: false,
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                minimize: true,
+                url: false,
+              },
             },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [
+                  autoprefixer({
+                    browsers: ['ie >= 10', 'last 4 version'],
+                  }),
+                ],
+                sourceMap: true,
+              },
             },
-          },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+              },
+            },
           ],
         }),
       },
@@ -92,21 +102,25 @@ module.exports = {
       allChunks: true,
     }),
     new HtmlWebpackPlugin(),
-    new CopyWebpackPlugin([{
-      from: './src/fonts',
-      to: './fonts',
-    },
-    {
-      from: './src/favicon',
-      to: './favicon',
-    },
-    {
-      from: './src/images',
-      to: './images',
-    },
-    {
-      from: './src/uploads',
-      to: './uploads',
-    }]),
-  ].concat(htmlPlugins).concat(categoriesPages),
+    new CopyWebpackPlugin([
+      {
+        from: './src/fonts',
+        to: './fonts',
+      },
+      {
+        from: './src/favicon',
+        to: './favicon',
+      },
+      {
+        from: './src/images',
+        to: './images',
+      },
+      {
+        from: './src/uploads',
+        to: './uploads',
+      },
+    ]),
+  ]
+    .concat(htmlPlugins)
+    .concat(categoriesPages),
 };

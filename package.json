@@ -38,7 +38,9 @@
     "start": "webpack-dev-server --mode development"
   },
   "dependencies": {
+    "autoprefixer": "^8.2.0",
     "detect-touch": "^1.1.1",
+    "postcss-loader": "^2.1.3",
     "smoothscroll-polyfill": "^0.4.3"
   }
 }

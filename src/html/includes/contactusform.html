@@ -1,8 +1,31 @@
-<div>
-  <form action="">
-    <label for="name">name</label>
-    <input type="text">
-    <label for="surname">surname</label>
-    <input type="text">
-  </form>
+<div id="contact-us" class="contact-us">
+  <div class="container">
+    <h3 class="text-align-center">Свяжитесь с нами</h3>
+    <form action="">
+      <div class="flex">
+        <div class="flex-col flex-1-1">
+          <span class="form-input-icon input-type-user">
+            <input class="form-input" type="text" placeholder="Ваше имя" required />
+          </span>
+          <span class="form-input-icon input-type-phone">
+            <input class="form-input" type="tel" placeholder="Ваш телефон" required />
+          </span>
+          <span class="form-input-icon input-type-mail">
+            <input class="form-input" type="email" placeholder="Ваш email" required />
+          </span>
+          <span class="form-input-icon input-type-region select-wrapper">
+            <select class="form-input" name="region" id="region">
+              <option value="0" disabled selected="selected">Ваш регион</option>
+              <option value="ul">Ульяновск</option>
+              <option value="msk">Москва</option>
+            </select>
+          </span>
+        </div>
+        <div class="flex-col flex-1-1">
+          <textarea class="form-input input-icon" placeholder="Ваше сообщение" required></textarea>
+          <input class="form-input input-icon form-submit" type="submit" onsubmit="javascript: console.log(this);" value="Отправить сообщение">
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

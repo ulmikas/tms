@@ -13,9 +13,4 @@
 }
 .about__text {
   padding-top: 20px;
-  padding-right: $side-padding-mobile;
-
-  @media (min-width: $tablet) {
-    padding-right: $side-padding;
-  }
 }

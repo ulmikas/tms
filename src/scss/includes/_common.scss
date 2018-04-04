@@ -1,13 +1,33 @@
 .flex {
   display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    flex-wrap: nowrap;
+  }
 }
 
 .flex-col {
   flex: 1 0 0;
+
+  @media (min-width: $tablet) {
+    padding-right: $side-padding;
+  }
+
+  & + & {
+    @media (min-width: $tablet) {
+      padding-right: 0;
+      padding-left: $side-padding;
+    }
+  }
 }
 
 .flex-1-1 {
-  flex-basis: 50%;
+  flex-basis: 100%;
+
+  @media (min-width: $tablet) {
+    flex-basis: 50%;
+  }
 }
 
 .link {
