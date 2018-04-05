@@ -26,7 +26,7 @@ function generateHtmlPlugins(templateDir) {
 const generateCategoriesHtml = categories => categories.map(cat => (
   new HtmlWebpackPlugin({
     filename: `${cat.slug}.html`,
-    template: path.resolve(__dirname, './src/html/test/category.html'),
+    template: path.resolve(__dirname, './src/html/products/category.html'),
     inject: false,
     category: cat,
     title: cat.name,

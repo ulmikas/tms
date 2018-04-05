@@ -1,3 +1,39 @@
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+$containerWidth: 1024px;
+
+/* Layout */
+* {
+  box-sizing: border-box;
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: 14px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $containerWidth;
+  width: 100%;
+  padding-right: $side-padding-mobile;
+  padding-left: $side-padding-mobile;
+
+  @media (min-width: $tablet) {
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+  }
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -22,29 +58,59 @@
   }
 }
 
-.flex-1-1 {
-  flex-basis: 100%;
+.flex-reverse {
+  flex-direction: row-reverse;
 
-  @media (min-width: $tablet) {
-    flex-basis: 50%;
+  .flex-col {
+    @media (min-width: $tablet) {
+      padding-right: 0;
+      padding-left: $side-padding;
+    }
+  }
+
+  .flex-col + .flex-col {
+    @media (min-width: $tablet) {
+      padding-left: 0;
+      padding-right: $side-padding;
+    }
   }
 }
 
-.link {
-  color: $primary-color;
-}
+.flex-1-1 {
+  flex-basis: 100%;
+  max-width: 100%;
 
-.image {}
-.image--right {}
-
-.icon__plus {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cpath fill='%23d12027' d='M40.06 0a40.06 40.06 0 1 0 40.05 40.06A40.05 40.05 0 0 0 40.06 0zm21 44.6h-17v17h-9v-17h-16v-9h16v-16h9v16h17z'/%3E%3C/svg%3E") no-repeat center;
-  display: block;
-  height: 80px;
-  width: 80px;
+  @media (min-width: $tablet) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
 }
 
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+/* Components */
+.link {
+  color: $primary-color;
+}
+
+.image {
+  max-width: 100%;
+}
+.image--right {
+}
+
+// icons
+.icon {
+  display: block;
+}
+
+.icon__plus {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cpath fill='%23d12027' d='M40.06 0a40.06 40.06 0 1 0 40.05 40.06A40.05 40.05 0 0 0 40.06 0zm21 44.6h-17v17h-9v-17h-16v-9h16v-16h9v16h17z'/%3E%3C/svg%3E")
+    no-repeat center;
+  display: block;
+  height: 80px;
+  width: 80px;
 }

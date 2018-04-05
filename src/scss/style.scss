@@ -1,48 +1,13 @@
-@import 'components';
-
-$font-stack: -apple-system, BlinkMacSystemFont, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
-$containerWidth: 1024px;
-
-/* Layout */
-body {
-  font-family: $font-stack;
-  font-size: 14px;
-
-  @media (min-width: $tablet) {
-    font-size: 16px;
-  }
-
-  #logo {
-    width: 10rem;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-}
-
-.header {
-  position: sticky;
-  top: -10px;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  padding-right: $side-padding-mobile;
-  padding-left: $side-padding-mobile;
-  
-  @media (min-width: $tablet) {
-    max-width: $containerWidth;
-    padding-left: $side-padding;
-    padding-right: $side-padding;
-  }
-}
-
-/* Components */
-
-// icons
-.icon {
-  display: block;
-}
+@import 'base',
+  'includes/buttons',
+  'includes/forms',
+  'includes/common',
+  'includes/grid',
+  'includes/header',
+  'includes/footer',
+  'includes/promo',
+  'includes/about',
+  'includes/terms',
+  'includes/catalog',
+  'includes/contacts',
+  'includes/products';

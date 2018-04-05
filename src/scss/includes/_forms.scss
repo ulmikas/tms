@@ -57,7 +57,7 @@ select.form-input {
   &::before {
     content: '';
     height: 30px;
-    width: 30px;
+    width: 50px;
     border-right: 1px solid $grey-lighter;
     position: absolute;
     left: 0;
@@ -111,7 +111,7 @@ select.form-input {
 .contact-us {
   background: url(../images/form-bg.jpg) no-repeat center / cover;
 
-  h3 {
+  h2 {
     color: $white;
   }
 

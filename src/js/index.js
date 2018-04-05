@@ -33,8 +33,9 @@ const scrollToSection = (selector) => {
 
 const handleScroll = () => {
   const navigation = document.querySelector(`.${HEADER_CLASSNAME}`);
-  const action = window.scrollY >= STICKY_HEADER_TRIGGER ? 'add' : 'remove';
+  const action = window.pageYOffset >= STICKY_HEADER_TRIGGER ? 'add' : 'remove';
   navigation.classList[action](STICKY_HEADER_CLASSNAME);
+  document.body.classList[action](`${STICKY_HEADER_CLASSNAME}-nav`);
 };
 
 const handleScrollUp = () => {
@@ -68,9 +69,11 @@ const handleToggleMenu = () => {
 };
 
 const handleNavigation = (e) => {
-  e.preventDefault();
-  scrollToSection(e.target.hash);
-  handleCloseMenu();
+  if (document.querySelector(e.target.hash)) {
+    e.preventDefault();
+    scrollToSection(e.target.hash);
+    handleCloseMenu();
+  }
 };
 
 const handleGoToBtn = (e) => {
@@ -82,6 +85,7 @@ smoothscroll.polyfill();
 if (hasTouch) {
   document.body.classList.add('touchscreen');
 }
+document.body.classList.add('test');
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);

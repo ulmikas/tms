@@ -1,3 +1,16 @@
-.cat-description {
+.category {
   background: $grey-lightest;
+}
+
+.category-header {
+  background: url(../images/main-bg.jpg) no-repeat center / cover;
+  height: 138px;
+}
+
+.products {
+  background: $white;
+}
+
+.product {
+  border-bottom: 4px solid $grey-lightest;
 }

@@ -1,5 +1,7 @@
 .navigation {
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 999;
 }
@@ -205,10 +207,7 @@ header {
 }
 
 .fixed {
-  position: fixed;
   background-color: $menu-background;
-  z-index: 999;
-  width: 100%;
 
   header {
     padding-top: 25px;

@@ -7,6 +7,7 @@
   padding-top: 160px;
   padding-bottom: 30px;
   position: relative;
+  flex-direction: column;
 
   @media (min-width: $tablet) {
     min-height: 730px;
@@ -36,6 +37,7 @@
 .promo__text {
   font-size: 26px;
   line-height: 1.2;
+  max-width: 100%;
   text-align: center;
 
   @media (min-width: $tablet) {
