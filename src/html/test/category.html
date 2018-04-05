@@ -7,15 +7,7 @@ var _tpl = name => _.template(require(`./../includes/${name}.html`))(data);
 %>
 
 <%= _tpl('header') %>
-
-<div class="container">
-  <%= data.data.catName %>
-  <p>
-    <%= data.data.description %>
-  </p>
-  <!-- <%= _tpl('description') %> -->
-  <!-- <%= _tpl('contactusform') %> -->
-</div>
+<%= _tpl('description') %>
 
 <%= _tpl('footer') %>
 

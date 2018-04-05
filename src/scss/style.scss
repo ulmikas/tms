@@ -1,17 +1,4 @@
-@import './includes/_reset.scss';
-@import './includes/_variables.scss';
-@import './includes/_typo.scss';
-@import './includes/_common.scss';
-@import './includes/_buttons.scss';
-@import './includes/_forms.scss';
-@import './includes/_header.scss';
-@import './includes/_promo.scss';
-@import './includes/_about.scss';
-@import './includes/_terms.scss';
-@import './includes/_catalog.scss';
-@import './includes/_grid.scss';
-@import './includes/_contacts.scss';
-@import './includes/_footer.scss';
+@import 'components';
 
 $font-stack: -apple-system, BlinkMacSystemFont, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 $containerWidth: 1024px;
