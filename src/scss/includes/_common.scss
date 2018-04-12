@@ -76,6 +76,10 @@ body {
   }
 }
 
+.flex-align-center {
+  align-items: center;
+}
+
 .flex-1-1 {
   flex-basis: 100%;
   max-width: 100%;
@@ -87,8 +91,13 @@ body {
 }
 
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 /* Components */

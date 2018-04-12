@@ -11,7 +11,7 @@ const NAV_TOGGLE_ICON = '.nav-toggle';
 const HEADER_NAV = '.header-nav';
 const PROMO_BLOCK = '.promo';
 const BTN_TERMS = '#btn-terms';
-const BTN_CONTACTS = '#btn-contacts';
+const BTN_CONTACTS = '#btn-contact-us';
 
 const addEvent = (selector, event, handler) => {
   const el = document.querySelector(selector);
@@ -85,7 +85,6 @@ smoothscroll.polyfill();
 if (hasTouch) {
   document.body.classList.add('touchscreen');
 }
-document.body.classList.add('test');
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);

@@ -2,6 +2,12 @@
   background: $grey-lightest;
 }
 
+.category__description {
+  p {
+    color: $grey-light;
+  }
+}
+
 .category-header {
   background: url(../images/main-bg.jpg) no-repeat center / cover;
   height: 138px;
@@ -13,4 +19,22 @@
 
 .product {
   border-bottom: 4px solid $grey-lightest;
+}
+
+.product__description p {
+  color: $grey-light;
+  margin-bottom: 10px;
+}
+
+.product__image {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.product__sku {
+  color: $grey-light;
+  margin-top: 30px;
 }
