@@ -19,6 +19,8 @@ function generateHtmlPlugins(templateDir) {
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       inject: false,
       content: data,
+      title: 'TMS',
+      headerTitle: 'TMS',
     });
   });
 }
@@ -29,7 +31,8 @@ const generateCategoriesHtml = categories => categories.map(cat => (
     template: path.resolve(__dirname, './src/html/products/category.html'),
     inject: false,
     category: cat,
-    title: cat.name,
+    title: `TMS: ${cat.catName}`,
+    headerTitle: `TMS: ${cat.catName}`,
   })
 ));
 

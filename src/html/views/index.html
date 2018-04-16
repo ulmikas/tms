@@ -1,7 +1,7 @@
 <%
   var data = {
     data: htmlWebpackPlugin.options.content || {},
-    headerTitle: 'index',
+    headerTitle: htmlWebpackPlugin.options.title,
   }
   var _tpl = name => _.template(require(`./../includes/${name}.html`))(data);
 %>
