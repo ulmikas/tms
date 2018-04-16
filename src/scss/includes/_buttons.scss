@@ -39,6 +39,7 @@ $button-height: 52px;
 .btn-primary {
   color: $btn-primary-color;
   background: $btn-primary-background;
+  transition: background-color 200ms ease-out;
 
   &:hover {
     color: $btn-secondary-color-hover;
@@ -54,6 +55,7 @@ $button-height: 52px;
   color: $btn-secondary-color;
   border: 2px solid $btn-secondary-border-color;
   background: transparent;
+  transition: background-color 200ms ease-out;
 
   &:hover {
     color: $btn-secondary-color-hover;
