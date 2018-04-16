@@ -31,6 +31,13 @@ const scrollToSection = (selector) => {
   }
 };
 
+const handleLoad = () => {
+  const target = window.location.hash;
+  if (target) {
+    scrollToSection(target);
+  }
+};
+
 const handleScroll = () => {
   const navigation = document.querySelector(`.${HEADER_CLASSNAME}`);
   const action = window.pageYOffset >= STICKY_HEADER_TRIGGER ? 'add' : 'remove';
@@ -87,7 +94,7 @@ if (hasTouch) {
 }
 
 window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
+window.addEventListener('load', handleLoad);
 
 addEvent(DOWN_BUTTON_CLASSNAME, 'click', handleSkipPromo);
 addEvent(UP_BUTTON_CLASSNAME, 'click', handleScrollUp);
