@@ -181,7 +181,7 @@ const data = {
         {
           name: 'WIHA Мультитул PocketStar',
           description: [
-            'удобный карманный инструмент с&nbsp;различными видами вставок: 6-ти гранные, Torx, Torx Magic Spring, плоские, крестовые и&nbsp;прочие.',
+            'Удобный карманный инструмент с&nbsp;различными видами вставок: 6-ти гранные, Torx, Torx Magic Spring, плоские, крестовые и&nbsp;прочие.',
           ],
           sku: '23047',
           image: '363_p7.jpg',
@@ -189,7 +189,7 @@ const data = {
         {
           name: 'Отвёртка с Т-образной рукояткой',
           description: [
-            'Отвёртка с&nbsp;Т-образной рукояткой, представлена в&nbsp;линейке в&nbsp;различных типоразмерах: 6-ти граник с&nbsp;Magic Ring, Torx, Torx MagicSpring, Torx Plus, с&nbsp;торцевой головкой.',
+            'Отвёртка с&nbsp;Т-образной рукояткой, представлена в&nbsp;линейке в&nbsp;различных типоразмерах: 6-ти гранник с&nbsp;Magic Ring, Torx, Torx MagicSpring, Torx Plus, с&nbsp;торцевой головкой.',
           ],
           sku: '27928',
           image: '364r.jpg',

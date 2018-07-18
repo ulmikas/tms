@@ -126,8 +126,12 @@ select.form-input {
   }
 
   textarea {
-    height: calc(100% - 74px);
+    height: 100%;
     min-height: 150px;
     resize: none;
   }
+}
+
+#custom-region {
+  display: none;
 }

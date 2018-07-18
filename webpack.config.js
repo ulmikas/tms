@@ -19,8 +19,8 @@ function generateHtmlPlugins(templateDir) {
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       inject: false,
       content: data,
-      title: 'TMS',
-      headerTitle: 'TMS',
+      title: 'TMS. Инструменты Wiha в Тольятти',
+      headerTitle: 'TMS. Инструменты Wiha в Тольятти',
     });
   });
 }
